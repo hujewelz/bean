@@ -38,7 +38,6 @@ module Workspace
         # end
       end
       File.join(Workspace::TMP_DIR, "#{@name.to_s.capitalize}-ExportOptions.plist")
-      # return plist
     end
 
     def export_path

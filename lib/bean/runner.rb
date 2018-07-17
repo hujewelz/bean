@@ -8,6 +8,8 @@ module Bean
   class Runner
     def init
       beanfile = Workspace::BEAN_FILE
+      return puts "Beanfile already exist." if File.exist?(beanfile)
+      
       File.open(beanfile, 'w') do |f|
         f.write <<-"..."
         bean :dev do |a|
@@ -26,7 +28,7 @@ module Bean
       # puts "Beanfile: #{bean_file}"
 
       unless Workspace.bean?
-        puts "BeanFile does not exist.".red
+        puts "Beanfile does not exist.".red
         return
       end
       
