@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby -W
+# encoding: utf-8
+
+require 'bean'
+
+if ARGV.length > 0 
+  action = ARGV.first
+  # file = File.join(Dir.pwd, 'aFile')
+  # puts file
+ 
+  Bean::Runner.new.exec(action)
+  
+end
