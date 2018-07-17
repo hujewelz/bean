@@ -42,7 +42,7 @@ bean :release do |c|
 end
 ```
 
-然后在终端使用以下命令来运行它:
+然后就可以在终端运行它:
 
 ```shell
 $ xbean dev

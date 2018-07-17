@@ -6,5 +6,20 @@ require 'xbean'
 if ARGV.length > 0 
   action = ARGV.first
   Bean::Runner.new.exec(action)
-  
+else 
+  puts <<-"..."
+Usage: 
+    $ xbean COMMAND
+
+Commands:
+
+    + init   Generate a Beanfile for the curren directory
+    + <bean>   The custom bean action in your Beanfile 
+
+Example:
+
+    xbean dev 
+      Run the `dev` bean you defined in your Beanfile.
+
+  ...
 end
