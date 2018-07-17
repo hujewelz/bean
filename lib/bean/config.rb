@@ -37,7 +37,8 @@ module Workspace
           plist.send key.to_sym, value
         # end
       end
-      return plist
+      File.join(Workspace::TMP_DIR, "#{@name.to_s.capitalize}-ExportOptions.plist")
+      # return plist
     end
 
     def export_path
@@ -55,8 +56,8 @@ module Workspace
 
     def get_team_identifier
       mobileprovision = File.join(File.expand_path("#{scheme}.xcarchive", Workspace::TMP_DIR), "Products/Applications/#{scheme}.app/embedded.mobileprovision")
-      return unless File.exist?(mobileprovision)
       # puts "mobileprovision: #{mobileprovision}"
+      return unless File.exist?(mobileprovision)
       team_id = XcodeTool::Mobileprovision.new(mobileprovision).team_identifier
       if team_id != ""
         @configs = {teamID: team_id.chomp} 

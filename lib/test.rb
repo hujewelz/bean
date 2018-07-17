@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby -W
 
-require_relative 'bean'
+require_relative 'xbean'
 
 # plist = ExportOptions::Plist.new
 # plist.team_id = 'TeamIDDDD'

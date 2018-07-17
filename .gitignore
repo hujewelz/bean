@@ -1,0 +1,4 @@
+.Tmp
+*.gem
+Beanfile
+.DS_Store

@@ -4,9 +4,6 @@ module ExportOptions
   class Plist
     ALL_KEYS = %w(compileBitcode method signingStyle teamID thinning)
 
-    # The ExportOptions plist file
-    attr_reader :export_options_plist_file  
-
     def initialize(name)
       @export_options_plist_file = File.join(Workspace::TMP_DIR, "#{name.to_s.capitalize}-ExportOptions.plist")
 
@@ -37,12 +34,10 @@ module ExportOptions
       undef_method m unless m.to_s =~ /^__|send|method_missing|export_options_plist_file|object_id|response_to?/
     end
 
-    def self.exist?(name)
-      ALL_KEYS.include?(name.to_s)
-      # puts ALL_KEYS.include?(name.to_s) 
-    end
-
     def method_missing(m, *args) 
+      if m.to_s == 'export_options_plist_file'
+        return @export_options_plist_file
+      end
       # puts "Plist call #{m.to_s}(#{args.join(',')})"
       return unless ALL_KEYS.include? m.to_s
 
@@ -50,5 +45,13 @@ module ExportOptions
       plist_buddy.send m.to_sym, args.join(', ')
     end
 
+    def self.exist?(name)
+      ALL_KEYS.include?(name.to_s)
+      # puts ALL_KEYS.include?(name.to_s) 
+    end
+
+    def export_options_plist_file
+      @export_options_plist_file
+    end
   end
 end
