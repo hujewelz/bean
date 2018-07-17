@@ -9,7 +9,7 @@ module Bean
     def init
       beanfile = Workspace::BEAN_FILE
       return puts "Beanfile already exist." if File.exist?(beanfile)
-      
+
       File.open(beanfile, 'w') do |f|
         f.write <<-"..."
         bean :dev do |a|
@@ -21,17 +21,9 @@ module Bean
     end
 
     def exec(name)
-      if name.to_s == 'init'
-        init
-      end
+      return init if name.to_s == 'init'
       bean_file = Workspace::BEAN_FILE
-      # puts "Beanfile: #{bean_file}"
-
-      unless Workspace.bean?
-        puts "Beanfile does not exist.".red
-        return
-      end
-      
+      return puts "Beanfile does not exist.".red unless Workspace.bean?
       Action::BeanAction.new(bean_file).run(name)
     end
   end

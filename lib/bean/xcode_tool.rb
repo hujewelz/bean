@@ -14,7 +14,6 @@ module XcodeTool
     def method_missing(m, *args) 
       # puts "PlistBuddy call #{m.to_s}, args: #{args}"
       # return unless m.to_s.include?('=')
-
       key = m.to_s
       format_plist(key, args)
     end
@@ -37,8 +36,6 @@ module XcodeTool
   
       # If key contain `id` or `Id`, replace it with `ID`
       key = key.gsub(/id|Id/, 'ID') if key =~ /id|Id/
-
-      puts "#{key} #{args}"
 
       _args = args.join().split(", ")
       key = key.delete('=') if key.index('=')      

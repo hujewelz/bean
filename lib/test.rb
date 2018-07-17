@@ -7,7 +7,12 @@ require_relative 'xbean'
 # plist.user_id = 'user', 'string'
 # plist.compile_bitcode = 'true', 'bool'
 
-# path = "/Users/huluobo/Developer/xiaoDian/Example/xiaoDian-Example.xcarchive/Products/Applications/xiaoDian_Example.app/embedded.mobileprovision"
+# path = "/Users/huluobo/Developer/xiaoDian/Example/.Tmp/xiaoDian-Example.xcarchive/Products/Applications/xiaoDian-Example.app/embedded.mobileprovision"
+
+#  path = "/Users/huluobo/Developer/xiaoDian/Example/.Tmp/xiaoDian-Example.xcarchive/Products/Applications/xiaoDian_Example.app/embedded.mobileprovision" 
+
+#  puts path
+
 # m = XcodeTool::Mobileprovision.new(path)
 # puts m.team_identifier
 # m.team_name

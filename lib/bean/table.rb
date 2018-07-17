@@ -5,7 +5,7 @@ class Table
 
   def initialize(map)
     @map = map
-    @left_dash = 10
+    @left_dash = 20
     @right_dash = 20
   end
 
@@ -23,11 +23,11 @@ class Table
 
   def header
     max
-    left = @left_dash - 3
-    right = @right_dash - 5
+    left = @left_dash - 6
+    right = @right_dash - 12
 
     r = line
-    r << "| Key#{indent(left)} | Value#{indent(right)} |\n"
+    r << "| Option#{indent(left)} | Configuraton#{indent(right)} |\n"
     r << line
   end
 
