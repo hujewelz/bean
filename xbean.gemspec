@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'bean'
+  s.name        = 'xbean'
   s.version     = '0.0.1'
   s.date        = '2018-07-16'
   s.summary     = "Archiver for iOS."
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|bin)})
   end
-  s.executables << 'bean'
+  s.executables << 'xbean'
   s.homepage    =
     'https://github.com/hujewelz/bean.git'
   s.license       = 'MIT'
