@@ -21,7 +21,7 @@ module XcodeBuilder
       export_option_plist = config.export_options_plist
       # puts "export option poist: #{export_option_plist}"
       export_command = "xcodebuild -exportArchive -archivePath #{archive_path} -exportPath #{export_path} -exportOptionsPlist #{export_option_plist}"
-      # puts export_command.red
+      puts export_command.red
       
       system archive_command
       system export_command

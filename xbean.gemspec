@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'xbean'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2018-07-16'
   s.summary     = "Archiver for iOS."
   s.description = "An Arciver tool for iOS."

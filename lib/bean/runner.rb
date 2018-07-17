@@ -6,9 +6,24 @@ require_relative 'colored'
 
 module Bean
   class Runner
+    def init
+      beanfile = Workspace::BEAN_FILE
+      File.open(beanfile, 'w') do |f|
+        f.write <<-"..."
+        bean :dev do |a|
+          a.workspace = '<Your Workspace>'
+          a.scheme = '<Your scheme>'
+        end
+        ...
+      end
+    end
+
     def exec(name)
+      if name.to_s == 'init'
+        init
+      end
       bean_file = Workspace::BEAN_FILE
-      puts "Beanfile: #{bean_file}"
+      # puts "Beanfile: #{bean_file}"
 
       unless Workspace.bean?
         puts "BeanFile does not exist.".red
