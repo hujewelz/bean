@@ -42,10 +42,11 @@ module Workspace
     end
 
     def export_path
-      File.join(Dir.pwd, "#{self.scheme}")
+      path = File.join(Dir.pwd, "#{self.scheme}")
       if self.output_name 
-        return File.join(Dir.pwd, "#{self.output_name}")
+        path = File.join(Dir.pwd, "#{self.output_name}")
       end
+      return path
     end
 
     def to_s

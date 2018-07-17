@@ -16,7 +16,7 @@ module XcodeBuilder
 
       archive_path = File.expand_path("#{scheme}.xcarchive", tmp_dir)
       archive_command = "xcodebuild -workspace #{workspace} -scheme #{scheme} clean archive -archivePath #{archive_path}"
-      # puts archive_command.red
+      puts archive_command.red
 
       export_option_plist = config.export_options_plist
       # puts "export option poist: #{export_option_plist}"
@@ -26,7 +26,7 @@ module XcodeBuilder
       system archive_command
       system export_command
 
-      Workspace.clear
+      # Workspace.clear
     end
 
   end
