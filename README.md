@@ -1,4 +1,4 @@
-![bean](http://othizsxsl.bkt.clouddn.com/bean-logo.png)
+![bean](http://othizsxsl.bkt.clouddn.com/xbean-logo.png)
 
 [![Gem Version](https://badge.fury.io/rb/xbean.png)](https://badge.fury.io/rb/xbean)
 
