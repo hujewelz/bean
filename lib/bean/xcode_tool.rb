@@ -87,8 +87,6 @@ module XcodeTool
     def command(name, key, value, type) 
       return unless %w(Add Set).include?(name)
       type = name == 'Add' ? " #{type}" : '' 
-      # cmd = "/usr/libexec/PlistBuddy -c '#{name} :#{key}#{type} #{value}' #{@plist_file}"
-      # puts cmd.red 
       system "/usr/libexec/PlistBuddy -c '#{name} :#{key}#{type} #{value}' #{@plist_file}"
     end
 

@@ -1,19 +1,16 @@
 #!/usr/bin/env ruby -W
-# encoding: utf-8
 
 require 'xbean'
 
-if ARGV.length > 0 
-  action = ARGV.first
-  Bean::Runner.new.exec(action)
-else 
-  puts <<-"..."
+return Bean::Runner.new.exec(ARGV.first) if ARGV.length > 0 
+ 
+puts <<-"..."
 Usage: 
     $ xbean COMMAND
 
 Commands:
 
-    + init   Generate a Beanfile for the curren directory
+    + init     Generate a Beanfile for the curren directory
     + <bean>   The custom bean action in your Beanfile 
 
 Example:
@@ -21,5 +18,4 @@ Example:
     xbean dev 
       Run the `dev` bean you defined in your Beanfile.
 
-  ...
-end
+...
