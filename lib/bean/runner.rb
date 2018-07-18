@@ -5,16 +5,15 @@ require_relative 'colored'
 module Bean
   class Runner
 
-    # exec then bean your defined in your own Beanfile.
-
     def exec(name)
       return init if name.to_s == 'init'
-      run_bean
+      run_bean(name)
     end
 
     private 
 
-    def run_bean
+    # exec then bean your defined in your own Beanfile.
+    def run_bean(name)
       bean_file = Workspace::BEAN_FILE
       return puts "Beanfile does not exist.".red unless Workspace.bean?
       Action::BeanAction.new(bean_file).run(name)

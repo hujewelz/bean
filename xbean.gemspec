@@ -1,6 +1,8 @@
+require_relative 'lib/bean/version'
+
 Gem::Specification.new do |s|
   s.name        = 'xbean'
-  s.version     = '0.0.6'
+  s.version     = Bean::VERSION
   s.date        = '2018-07-16'
   s.summary     = "Archiver for iOS."
   s.description = "A tool to Arcive iOS App."

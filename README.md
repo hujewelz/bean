@@ -1,7 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/xbean.png)](https://badge.fury.io/rb/xbean)
 
 # What is xbean
-xbean 是一个 iOS 自动打包工具。
+xbean 是一个小巧的 iOS 自动打包工具。从安装到使用只需要花费您一分钟。
 
 ## Installation
 

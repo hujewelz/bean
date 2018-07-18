@@ -15,7 +15,6 @@ module Workspace
 
   def clear
     `rm -rf #{TMP_DIR}` if Dir.exist?(TMP_DIR)
-    # Dir.delete(TMP_DIR) if Dir.exist?(TMP_DIR)
   end
 
 end

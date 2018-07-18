@@ -31,6 +31,6 @@ require_relative 'xbean'
 # config.team_id = 'DHF3334HH'
 # puts config
 
-# Bean::Runner.new.exec('dev')
-Bean::Runner.new.exec('init')
+Bean::Runner.new.exec('dev')
+# Bean::Runner.new.exec('init')
 
